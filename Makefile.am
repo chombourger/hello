@@ -3,6 +3,7 @@ RM = rm
 
 bin_PROGRAMS = hello
 hello_SOURCES = hello.c
+hello_LDADD = -lhello
 man1_MANS = hello.1
 
 hello.1: hello.sgml

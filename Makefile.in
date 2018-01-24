@@ -96,7 +96,7 @@ am__installdirs = "$(DESTDIR)$(bindir)" "$(DESTDIR)$(man1dir)"
 PROGRAMS = $(bin_PROGRAMS)
 am_hello_OBJECTS = hello.$(OBJEXT)
 hello_OBJECTS = $(am_hello_OBJECTS)
-hello_LDADD = $(LDADD)
+hello_DEPENDENCIES =
 AM_V_P = $(am__v_P_@AM_V@)
 am__v_P_ = $(am__v_P_@AM_DEFAULT_V@)
 am__v_P_0 = false
@@ -288,6 +288,7 @@ top_srcdir = @top_srcdir@
 DB2MAN = docbook-to-man
 RM = rm
 hello_SOURCES = hello.c
+hello_LDADD = -lhello
 man1_MANS = hello.1
 all: config.h
 	$(MAKE) $(AM_MAKEFLAGS) all-am
